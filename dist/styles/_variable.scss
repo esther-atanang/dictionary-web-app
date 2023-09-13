@@ -58,30 +58,3 @@ $purple: #A445ED;
 $lightpurple: #dabfee;
 $orange: #FF5252;
 
-:root{
-    --bg-color: #{$white};
-    --font-color: #{$dark-black};
-    --toggle-color: #{$greyish-light-black};
-    --play-button-color: #{$purple};
-    --player-background: #{$lightpurple};
-    --search-box: #{$dark-grey};
-    --moon: #{$greyish-light-black};
-    --border-color: #{$light-grey};
-    --error-color: #{$orange};
-    --font-family: "INTER", sans-serif;
-}
-[data-theme = "dark"]{
-    --bg-color: #{$very-dark-black};
-    --font-color: #{$white};
-    --search-box: #{$faded-black};
-    --moon: #{$purple};
-}
-[data-font = "sanserif"]{
-    --font-family: "INTER",sans-serif ;
-}
-[data-font = "mono"]{
-    --font-family: "INCONSOLATA",sans-serif;
-}
-[data-font = "serif"]{
-    --font-family: "LORA",sans-serif;
-}

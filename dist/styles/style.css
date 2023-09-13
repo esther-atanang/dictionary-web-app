@@ -41,6 +41,12 @@
   font-weight: 400;
   src: url("/dist/assets/fonts/lora/static/Lora-Regular.ttf") format("truetype");
 }
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
 :root {
   --bg-color: #FFFFFF;
   --font-color: #1F1F1F;
@@ -71,12 +77,6 @@
 
 [data-font=serif] {
   --font-family: "LORA",sans-serif;
-}
-
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
 }
 
 body {
