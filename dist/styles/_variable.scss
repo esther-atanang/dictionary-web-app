@@ -1,0 +1,87 @@
+@font-face {
+    font-family: 'INCONSOLATA';
+    font-style: normal;
+    font-weight: 700;
+    src: url('/dist/assets/fonts/inconsolata/static/Inconsolata-Bold.ttf') format('truetype');
+  }
+  @font-face {
+    font-family: 'INCONSOLATA';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/dist/assets/fonts/inconsolata/static/Inconsolata-Regular.ttf') format('truetype');
+  }
+
+  @font-face {
+    font-family: 'INTER';
+    font-style: normal;
+    font-weight: 700;
+    src: url('/dist/assets/fonts/inter/static/Inter-Bold.ttf') format('truetype');
+  }
+
+  @font-face {
+    font-family: 'INTER';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/dist/assets/fonts/inter/static/Inter-Regular.ttf') format('truetype');
+  }
+ 
+  @font-face {
+    font-family: 'LORA';
+    font-style: normal;
+    font-weight: 700;
+    src: url('/dist/assets/fonts/lora/static/Lora-Bold.ttf') format('truetype');
+  }
+
+  @font-face {
+    font-family: 'LORA';
+    font-style: italic;
+    font-weight: 700;
+    src: url('/dist/assets/fonts/lora/static/Lora-BoldItalic.ttf') format('truetype');
+  }
+
+  @font-face {
+    font-family: 'LORA';
+    font-style: normal;
+    font-weight: 400;
+    src:url('/dist/assets/fonts/lora/static/Lora-Regular.ttf') format('truetype');
+  }
+  
+$very-dark-black: #050505;
+$dark-black:#1F1F1F;
+$faded-black: #2D2D2D;
+$greyish-dark-black: #3A3A3A;
+$greyish-light-black: #757575;
+$dark-grey: #E9E9E9;
+$light-grey: #F4F4F4;
+$white: #FFFFFF;
+$purple: #A445ED;
+$lightpurple: #dabfee;
+$orange: #FF5252;
+
+:root{
+    --bg-color: #{$white};
+    --font-color: #{$dark-black};
+    --toggle-color: #{$greyish-light-black};
+    --play-button-color: #{$purple};
+    --player-background: #{$lightpurple};
+    --search-box: #{$dark-grey};
+    --moon: #{$greyish-light-black};
+    --border-color: #{$light-grey};
+    --error-color: #{$orange};
+    --font-family: "INTER", sans-serif;
+}
+[data-theme = "dark"]{
+    --bg-color: #{$very-dark-black};
+    --font-color: #{$white};
+    --search-box: #{$faded-black};
+    --moon: #{$purple};
+}
+[data-font = "sanserif"]{
+    --font-family: "INTER",sans-serif ;
+}
+[data-font = "mono"]{
+    --font-family: "INCONSOLATA",sans-serif;
+}
+[data-font = "serif"]{
+    --font-family: "LORA",sans-serif;
+}

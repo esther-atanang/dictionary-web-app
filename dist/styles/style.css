@@ -1,0 +1,363 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "INCONSOLATA";
+  font-style: normal;
+  font-weight: 700;
+  src: url("/dist/assets/fonts/inconsolata/static/Inconsolata-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "INCONSOLATA";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/dist/assets/fonts/inconsolata/static/Inconsolata-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "INTER";
+  font-style: normal;
+  font-weight: 700;
+  src: url("/dist/assets/fonts/inter/static/Inter-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "INTER";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/dist/assets/fonts/inter/static/Inter-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "LORA";
+  font-style: normal;
+  font-weight: 700;
+  src: url("/dist/assets/fonts/lora/static/Lora-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "LORA";
+  font-style: italic;
+  font-weight: 700;
+  src: url("/dist/assets/fonts/lora/static/Lora-BoldItalic.ttf") format("truetype");
+}
+@font-face {
+  font-family: "LORA";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/dist/assets/fonts/lora/static/Lora-Regular.ttf") format("truetype");
+}
+:root {
+  --bg-color: #FFFFFF;
+  --font-color: #1F1F1F;
+  --toggle-color: #757575;
+  --play-button-color: #A445ED;
+  --player-background: #dabfee;
+  --search-box: #E9E9E9;
+  --moon: #757575;
+  --border-color: #F4F4F4;
+  --error-color: #FF5252;
+  --font-family: "INTER", sans-serif;
+}
+
+[data-theme=dark] {
+  --bg-color: #050505;
+  --font-color: #FFFFFF;
+  --search-box: #2D2D2D;
+  --moon: #A445ED;
+}
+
+[data-font=sanserif] {
+  --font-family: "INTER",sans-serif ;
+}
+
+[data-font=mono] {
+  --font-family: "INCONSOLATA",sans-serif;
+}
+
+[data-font=serif] {
+  --font-family: "LORA",sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  padding: 1rem 2rem;
+  background-color: var(--bg-color);
+  font-family: var(--font-family);
+  color: var(--font-color);
+}
+
+.inner-nav {
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.inner-nav .options {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+.inner-nav .options .select {
+  position: relative;
+}
+.inner-nav .options select {
+  outline: none;
+  font-family: var(--font-family);
+  background-color: transparent;
+  color: var(--font-color);
+  padding: 2px;
+  font-weight: 600;
+  font-size: 1rem;
+  border: none;
+  margin-right: 20px;
+  width: 100%;
+  height: 30px;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+          appearance: none;
+}
+.inner-nav .options .arrow {
+  position: absolute;
+  right: 5px;
+  top: 12px;
+}
+.inner-nav .options .themes {
+  display: flex;
+  align-items: center;
+  border-left: 1px solid var(--border-color);
+  gap: 20px;
+  padding: 0.3rem;
+}
+.inner-nav .options .themes .moon path {
+  stroke: var(--moon);
+}
+.inner-nav .options .toggle {
+  display: flex;
+  align-items: center;
+  background-color: var(--toggle-color);
+  width: 50px;
+  height: 25px;
+  margin-left: 15px;
+  border-radius: 20px;
+  padding: 0.3rem 0.2rem;
+}
+.inner-nav .options .toggle .circle {
+  width: 20px;
+  border-radius: 100%;
+  height: 20px;
+  background: #FFFFFF;
+  cursor: r;
+  transition: all ease-out 0.5s;
+}
+.inner-nav .options .active {
+  background: var(--play-button-color);
+}
+.inner-nav .options .active .circle {
+  transform: translateX(110%);
+}
+
+main {
+  margin-top: 30px;
+}
+main .error {
+  margin-top: 80px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+main .error .emoji p {
+  font-size: 5rem;
+}
+main .error .error-message {
+  line-height: 1.4;
+  width: 70%;
+}
+main .search-box {
+  position: relative;
+}
+main .search-box button {
+  position: absolute;
+  right: 20px;
+  background-color: transparent;
+  top: 50%;
+  color: var(--play-button-color);
+  font-size: 1.2rem;
+  transform: translate(-50%, -50%);
+  border: none;
+}
+main .search {
+  font-family: var(--font-family);
+  width: 100%;
+  font-weight: 700;
+  font-size: 1.2rem;
+  padding: 1rem;
+  border: none;
+  color: var(--font-color);
+  caret-color: var(--play-button-color);
+  background: var(--search-box);
+  border-radius: 15px;
+}
+main .search::-moz-placeholder {
+  color: var(--toggle-color);
+}
+main .search::placeholder {
+  color: var(--toggle-color);
+}
+main .search:focus {
+  outline: none;
+  border: 1.5px solid var(--play-button-color);
+}
+main .error-box {
+  position: relative;
+}
+main .error-box .search {
+  border: 1px solid var(--error-color);
+}
+main .error-box::before {
+  content: "Whoops, can't be empty...";
+  position: absolute;
+  bottom: -25px;
+  font-size: 1rem;
+  color: var(--error-color);
+}
+main .searched {
+  margin-top: 30px;
+}
+main .searched .inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+main .searched .inner .words {
+  line-height: 1.5;
+}
+main .searched .inner button {
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 100%;
+  background-color: var(--play-button-color);
+  cursor: pointer;
+}
+main .searched .inner button .fa-play {
+  color: white;
+  font-size: 1rem;
+}
+main .searched .inner .pronunciation {
+  color: var(--play-button-color);
+}
+main .source {
+  border-top: 0.9px solid #E9E9E9;
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+  padding-top: 1rem;
+}
+main .source .source-heading {
+  color: var(--toggle-color);
+}
+main .source .source-heading + div {
+  display: flex;
+  -moz-column-gap: 8px;
+       column-gap: 8px;
+  align-items: center;
+}
+main .source .source-heading + div i {
+  color: var(--toggle-color);
+}
+main .source p {
+  font-size: 0.8rem;
+}
+main .heading {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+  font-style: italic;
+}
+main .heading h2 {
+  font-size: 1rem;
+}
+main .heading .line {
+  width: 100%;
+  border-top: 0.9px solid var(--search-box);
+}
+main .full-meaning {
+  margin-top: 30px;
+}
+main .full-meaning h3 {
+  font-weight: 400;
+  font-size: 0.9rem;
+  color: var(--toggle-color);
+  margin-bottom: 10px;
+}
+main .full-meaning ul {
+  display: flex;
+  padding: 1rem;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  row-gap: 1rem;
+  list-style-type: none;
+}
+main .full-meaning ul li {
+  color: var(--font-color);
+  line-height: 1.4;
+  position: relative;
+  font-size: 0.85rem;
+}
+main .full-meaning ul li::before {
+  content: "•";
+  color: var(--play-button-color);
+  display: inline-block;
+  width: 1.2em;
+  margin-left: -1em;
+}
+main .full-meaning ul .example {
+  font-size: 0.85rem;
+  color: #757575;
+}
+main .full-meaning .synonyms, main .full-meaning .antonyms {
+  display: flex;
+  align-items: baseline;
+  -moz-column-gap: 1rem;
+       column-gap: 1rem;
+}
+main .full-meaning .synonyms ul, main .full-meaning .antonyms ul {
+  display: flex;
+  flex-direction: row;
+  padding: 0px;
+  -moz-column-gap: 0.5rem;
+       column-gap: 0.5rem;
+  row-gap: 0.4rem;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+main .full-meaning .synonyms ul li, main .full-meaning .antonyms ul li {
+  font-weight: 700;
+  color: var(--play-button-color);
+  font-size: 0.8rem;
+}
+main .full-meaning .synonyms ul li::before, main .full-meaning .antonyms ul li::before {
+  display: none;
+}
+
+@media screen and (min-width: 40em) {
+  body {
+    padding: 1rem 5rem;
+  }
+}
+@media screen and (min-width: 60em) {
+  body {
+    padding: 3rem 15rem;
+  }
+  h1 {
+    font-size: 3.5rem;
+  }
+}/*# sourceMappingURL=style.css.map */
