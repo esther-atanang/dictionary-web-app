@@ -3,43 +3,43 @@
   font-family: "INCONSOLATA";
   font-style: normal;
   font-weight: 700;
-  src: url("/dist/assets/fonts/inconsolata/static/Inconsolata-Bold.ttf") format("truetype");
+  src: url("../assets/fonts/inconsolata/static/Inconsolata-Bold.ttf") format("truetype");
 }
 @font-face {
   font-family: "INCONSOLATA";
   font-style: normal;
   font-weight: 400;
-  src: url("/dist/assets/fonts/inconsolata/static/Inconsolata-Regular.ttf") format("truetype");
+  src: url("../assets/fonts/inconsolata/static/Inconsolata-Regular.ttf") format("truetype");
 }
 @font-face {
   font-family: "INTER";
   font-style: normal;
   font-weight: 700;
-  src: url("/dist/assets/fonts/inter/static/Inter-Bold.ttf") format("truetype");
+  src: url("../assets/fonts/inter/static/Inter-Bold.ttf") format("truetype");
 }
 @font-face {
   font-family: "INTER";
   font-style: normal;
   font-weight: 400;
-  src: url("/dist/assets/fonts/inter/static/Inter-Regular.ttf") format("truetype");
+  src: url("../assets/fonts/inter/static/Inter-Regular.ttf") format("truetype");
 }
 @font-face {
   font-family: "LORA";
   font-style: normal;
   font-weight: 700;
-  src: url("/dist/assets/fonts/lora/static/Lora-Bold.ttf") format("truetype");
+  src: url("../assets/fonts/lora/static/Lora-Bold.ttf") format("truetype");
 }
 @font-face {
   font-family: "LORA";
   font-style: italic;
   font-weight: 700;
-  src: url("/dist/assets/fonts/lora/static/Lora-BoldItalic.ttf") format("truetype");
+  src: url("../assets/fonts/lora/static/Lora-BoldItalic.ttf") format("truetype");
 }
 @font-face {
   font-family: "LORA";
   font-style: normal;
   font-weight: 400;
-  src: url("/dist/assets/fonts/lora/static/Lora-Regular.ttf") format("truetype");
+  src: url("../assets/fonts/lora/static/Lora-Regular.ttf") format("truetype");
 }
 * {
   box-sizing: border-box;
