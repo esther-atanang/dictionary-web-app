@@ -78,7 +78,9 @@ const displayData = (data)=>{
 
     researched.innerHTML = ""
     const newItem = document.createElement("div")
-    newItem.innerHTML= `<section class="searched">
+    newItem.innerHTML= `
+    <section class="searched">
+  
     <div class="inner">
       <div class="words">
        <h1 class="word">${data.word}</h1>
@@ -117,11 +119,10 @@ const displayData = (data)=>{
         </div>` : "" }
      
   </article>`).join(" ")}
+  
   <div class="source">
    <p class="source-heading">Source</p>
-   <div> <p>${data.sourceUrls[0]}</p> 
-   <a href=${data.sourceUrls[0]}><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-   </div>
+   <div> <p class="url">${data.sourceUrls[0]}</p> <a href=${data.sourceUrls[0]}><i class="fa fa-external-link" aria-hidden="true"></i></a> </div>
   </div>
    
  </section>`

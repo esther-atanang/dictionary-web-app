@@ -80,7 +80,9 @@
 }
 
 body {
-  padding: 1rem 2rem;
+  position: relative;
+  min-height: 100vh;
+  padding: 1rem 1rem;
   background-color: var(--bg-color);
   font-family: var(--font-family);
   color: var(--font-color);
@@ -91,6 +93,9 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+.inner-nav .logo {
+  width: 50px;
 }
 .inner-nav .options {
   display: flex;
@@ -252,13 +257,19 @@ main .searched .inner .pronunciation {
 main .source {
   border-top: 0.9px solid #E9E9E9;
   display: flex;
+  flex-wrap: nowrap;
   align-items: center;
   -moz-column-gap: 10px;
        column-gap: 10px;
-  padding-top: 1rem;
+  padding: 0.5rem;
+}
+main .source .text-url {
+  background-color: black;
+  width: 20px;
 }
 main .source .source-heading {
   color: var(--toggle-color);
+  font-size: 0.8rem;
 }
 main .source .source-heading + div {
   display: flex;
@@ -269,8 +280,10 @@ main .source .source-heading + div {
 main .source .source-heading + div i {
   color: var(--toggle-color);
 }
-main .source p {
-  font-size: 0.8rem;
+main .source .source-heading + div .url {
+  display: inline;
+  width: 100%;
+  font-size: 0.77rem;
 }
 main .heading {
   margin-top: 30px;
